@@ -1,0 +1,34 @@
+// Colors
+// =============================================================================
+
+$color-bunker: #101820;
+$color-lynch: #697B95;
+$color-botticelli: #D2DCE8;
+$color-alabaster: #FAFAFA;
+
+$color-pastel-green: #76E691;
+$color-fern: #53B16A;
+
+$color-azure-radiance: #008FFF;
+
+// Typography
+// =============================================================================
+$default-font-stack: 'Helvetica Neue', Arial, Sans-serif;
+$default-font-color: $color-lynch;
+
+// Radius
+// =============================================================================
+$default-border-radius: 5px;
+
+// Layout
+// =============================================================================
+$max-container-width: 1024px;
+
+// Breakpoints
+// =============================================================================
+$breakpoints: (
+  sm: 35.5em, // 568px
+  md: 48em, // 768px
+  lg: 64em, // 1024px
+  xl: 80em, // 1280px
+);

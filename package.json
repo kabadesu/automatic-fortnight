@@ -1,0 +1,28 @@
+{
+  "name": "automatic-fortnight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm install -g gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kabadesu/automatic-fortnight.git"
+  },
+  "author": "Murray Nuttall",
+  "license": "The Unlicense",
+  "bugs": {
+    "url": "https://github.com/kabadesu/automatic-fortnight/issues"
+  },
+  "homepage": "https://github.com/kabadesu/automatic-fortnight#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "normalize-scss": "^7.0.0"
+  }
+}

@@ -1,6 +1,9 @@
-// Imports from node_modules, Check gulpfile for sass includePaths
-@import 'normalize/import-now';
-@import 'tools/extra-reset';
+// Vendor
+// =============================================================================
+@import 'normalize/import-now'; // node_modules
+@import 'vendor-overrides/normalize-reset';
+@import 'vendor-overrides/bootstrap-grid-settings';
+@import 'bootstrap-grid'; // node_modules
 
 // Tools
 // =============================================================================
@@ -10,22 +13,34 @@
 @import 'tools/functions';
 @import 'tools/respond';
 
+// Helpers
+// =============================================================================
 @import 'helpers/accessibility';
 
+// Typography
+// =============================================================================
 @import 'typography/type';
 @import 'typography/headings';
 @import 'typography/link';
 @import 'typography/spacer';
 
+// Layout
+// =============================================================================
 @import 'layout/base';
-@import 'layout/container';
 
+// UI (little bits and pieces)
+// =============================================================================
 @import 'ui/icons';
 @import 'ui/spot';
 
-
+// Forms
+// =============================================================================
+@import 'forms/fieldset';
+@import 'forms/field';
 @import 'forms/button';
 @import 'forms/input-text';
 @import 'forms/select';
 
+// Modules (big bits and pieces)
+// =============================================================================
 @import 'modules/snippet';

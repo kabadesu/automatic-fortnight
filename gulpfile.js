@@ -58,7 +58,8 @@ gulp.task('compile-sass', function () {
     return gulp.src(path.sassMain)
         .pipe(sass({
             includePaths: [
-                'node_modules/normalize-scss/sass'
+                'node_modules/normalize-scss/sass',
+                'node_modules/bootstrap/scss'
             ]
         }))
         .on('error', errorHandler)

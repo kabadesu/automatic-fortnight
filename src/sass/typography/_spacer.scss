@@ -1,6 +1,10 @@
 hr {
     border-top: 1px dashed $default-font-color;
     border-bottom-width: 0;
-    margin: 20px auto;
+    margin: $gap-lg auto;
     width: 170px;
+    @include respond(md) {
+        margin-top: $gap-xl;
+        margin-bottom: $gap-xl;
+    }
 }

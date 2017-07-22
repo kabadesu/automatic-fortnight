@@ -39,6 +39,12 @@ $ease-out-quadratic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 // =============================================================================
 $max-container-width: 1024px;
 
+// Gaps (Note that sizing doesn't relate to breakpoints - different t-shirts)
+// =============================================================================
+$gap-sm: 21px;
+$gap-lg: $gap-sm * 2;
+$gap-xl: 60px;
+
 // Breakpoints
 // =============================================================================
 $breakpoints: (

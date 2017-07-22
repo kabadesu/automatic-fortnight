@@ -4,6 +4,10 @@
 .snippet {
     display: block;
     width: 100%;
+    margin-bottom: $gap-sm;
+    @include respond(md) {
+        margin-bottom: $gap-lg;
+    }
 }
 
 .snippet__image {
@@ -16,7 +20,7 @@
     margin-bottom: 12px;
 }
 
-.snippet__content { }
+.snippet__content { } // Placeholder
 
 .snippet__title,
 .snippet__text {
@@ -37,4 +41,10 @@
     }
 }
 
-.snippet__more { }
+.snippet__more { } // Placeholder
+
+// If snippets ever have a background color or border, these classes can be
+// added to .row and .col's to ensure each box have equal heights - for now
+// these are unused
+.snippet-list { list-style: none; }
+.snippet-list__item { display: flex; }

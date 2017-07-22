@@ -7,7 +7,7 @@ Welcome to Automatic Fortnight.
 
 ## Installation
 
-Clone this repository and then run the following.
+Clone this repository and then run the following in the project root.
 
 ```
 npm install

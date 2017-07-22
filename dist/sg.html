@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Automatic Fortnight</title>
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body class="preload">
+
+		<div class="container">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+
+		<div class="">
+			<label class="sr-only" for="Input1">First Name</label>
+			<input type="text" placeholder="Regular placeholder text" id="Input1">
+		</div>
+
+		<a href="/" class="snippet">
+			<article>
+				<div class="snippet__image"></div>
+				<div class="snippet__content">
+					<h3 class="snippet__title">Sublime Trees</h3>
+					<div class="snippet__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet</p>
+					</div>
+					<div class="snippet__link">View some more</div>
+				</div>
+			</article>
+		</a>
+
+		<hr>
+
+		<svg class="icon">
+			<use xlink:href="images/sprite.svg#instagram" />
+		</svg>
+
+		<a href="/" class="spot">
+			<svg class="spot__icon">
+				<use xlink:href="images/sprite.svg#instagram" />
+			</svg>
+		</a>
+
+		<hr>
+
+		<a href="/" class="spot">
+			<svg class="spot__icon">
+				<use xlink:href="images/sprite.svg#instagram" />
+			</svg>
+			<span class="spot__text">Optional</span>
+		</a>
+
+		<hr>
+
+		<div class="input">
+			<input type="text" class="input__field" placeholder="This needs removing" onkeyup="this.setAttribute('value', this.value);" value="">
+			<label class="input__label">Some label here</label>
+		</div>
+
+		<hr>
+
+
+		<div class="select">
+			<select>
+				<option>Hello</option>
+			</select>
+			<label class="select__label">Country</label>
+			<span class="select__selected-option"></span>
+		</div>
+
+		<hr>
+
+		<textarea></textarea>
+
+		<div><button class="button button--primary">Hello</button></div>
+		<div><a href="" class="button button--primary">Goodbye</a></div>
+		<div><button class="button button--primary button--full-width">Hello</button></div>
+		<div><a href="" class="button button--primary button--full-width">Goodbye</a></div>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script>
+            $(function(){
+                $('body').removeClass('preload');
+            });
+		</script>
+	</body>
+</html>

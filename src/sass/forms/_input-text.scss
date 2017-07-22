@@ -1,5 +1,6 @@
 // Basic inputs
 [type=text],
+[type=email],
 textarea {
     @extend %default-text;
     background: white;
@@ -41,7 +42,6 @@ textarea {
 .input__label {
     position: absolute;
     left: 0;
-    right: 100%;
     top: 50%;
     display: block;
     padding: 0 14px;
@@ -50,7 +50,7 @@ textarea {
     transition: transform $default-transition-feel, font-size $default-transition-feel;
     white-space: nowrap;
     @include respond(md) {
-        transition: right .2s $ease-out-quadratic;
+        transition: left .3s $ease-out-quadratic, transform .3s $ease-out-quadratic;
     }
 }
 
@@ -59,9 +59,9 @@ textarea {
     font-size: 11px;
     transform: translateY(-18px);
     @include respond(md) {
-        transform: translateY(-50%);
-        left: auto;
-        right: 0;
+        transform: translateY(-50%) translateX(-100%);
+        left: 100%;
+        //right: 0;
 
     }
 }

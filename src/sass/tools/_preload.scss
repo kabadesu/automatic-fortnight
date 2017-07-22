@@ -1,0 +1,5 @@
+// Solves the problem of user agent stylesheets transitioning to our styles on
+// page load.
+.preload * {
+    transition: none !important;
+}

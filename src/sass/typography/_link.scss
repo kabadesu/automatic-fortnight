@@ -1,0 +1,10 @@
+a {
+    color: $default-link-color;
+    text-decoration: none;
+    transition: color .125s ease;
+    &:focus,
+    &:hover {
+        outline: 0;
+        color: lighten($default-link-color, 15%);
+    }
+}

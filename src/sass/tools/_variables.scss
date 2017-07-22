@@ -6,6 +6,9 @@ $color-lynch: #697B95;
 $color-botticelli: #D2DCE8;
 $color-alabaster: #FAFAFA;
 
+$color-silver-chalice: #AEAEAE;
+$color-gray: #828282;
+
 $color-pastel-green: #76E691;
 $color-fern: #53B16A;
 
@@ -15,10 +18,22 @@ $color-azure-radiance: #008FFF;
 // =============================================================================
 $default-font-stack: 'Helvetica Neue', Arial, Sans-serif;
 $default-font-color: $color-lynch;
+$default-font-size: 14px;
+$default-line-height: 18px;
+
+$default-link-color: $color-azure-radiance;
 
 // Radius
 // =============================================================================
-$default-border-radius: 5px;
+$default-radius: 5px;
+
+// Animation
+// =============================================================================
+$default-transition-duration: .2s;
+$default-transition-easing: ease;
+$default-transition-feel: $default-transition-duration $default-transition-easing;
+
+$ease-out-quadratic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
 // Layout
 // =============================================================================
@@ -27,8 +42,8 @@ $max-container-width: 1024px;
 // Breakpoints
 // =============================================================================
 $breakpoints: (
-  sm: 35.5em, // 568px
-  md: 48em, // 768px
-  lg: 64em, // 1024px
-  xl: 80em, // 1280px
+    sm: 35.5em, // 568px
+    md: 48em, // 768px
+    lg: 64em, // 1024px
+    xl: 80em, // 1280px
 );

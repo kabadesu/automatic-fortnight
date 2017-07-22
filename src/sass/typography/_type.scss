@@ -1,0 +1,11 @@
+%default-text {
+    color: $default-font-color;
+    font-family: $default-font-stack;
+    font-size: $default-font-size;
+    letter-spacing: 0.23px;
+    line-height: $default-line-height;
+}
+
+body {
+    @extend %default-text;
+}

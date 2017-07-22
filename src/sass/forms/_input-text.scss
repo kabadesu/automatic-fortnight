@@ -1,0 +1,67 @@
+// Basic inputs
+[type=text],
+textarea {
+    @extend %default-text;
+    background: white;
+    border: 1px solid $color-botticelli;
+    border-radius: $default-radius;
+    padding: 14px;
+    transition: border $default-transition-feel;
+    width: 100%;
+    &::placeholder {
+        color: $color-botticelli;
+        transition: color $default-transition-feel;
+    }
+    &:focus {
+        outline: 0;
+        border-color: $default-link-color;
+        color: $default-link-color;
+        &::placeholder {
+            color: lighten($color-botticelli, 10%);
+        }
+    }
+}
+
+.input {
+    position: relative;
+}
+
+.input__field {
+    padding-top: 20px;
+    padding-bottom: 8px;
+    @include respond(md) {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+    &::placeholder {
+        opacity: 0;
+    }
+}
+
+.input__label {
+    position: absolute;
+    left: 0;
+    right: 100%;
+    top: 50%;
+    display: block;
+    padding: 0 14px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: transform $default-transition-feel, font-size $default-transition-feel;
+    white-space: nowrap;
+    @include respond(md) {
+        transition: right .2s $ease-out-quadratic;
+    }
+}
+
+.input__field:focus + .input__label,
+.input__field:not([value='']) + .input__label {
+    font-size: 11px;
+    transform: translateY(-18px);
+    @include respond(md) {
+        transform: translateY(-50%);
+        left: auto;
+        right: 0;
+
+    }
+}

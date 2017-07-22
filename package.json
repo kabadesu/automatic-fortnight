@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm install -g gulp",
+    "postinstall": "npm install -g gulp && gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,9 +20,14 @@
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "gulp": "^3.9.1",
+    "gulp-cheerio": "^0.6.2",
     "gulp-clean-css": "^3.7.0",
     "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.0",
     "normalize-scss": "^7.0.0"
   }
 }

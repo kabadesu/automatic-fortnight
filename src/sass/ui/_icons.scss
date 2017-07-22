@@ -1,0 +1,16 @@
+// Icon
+// =============================================================================
+
+// You can use `.icon` to place icons throughout the site, and `%icon` for icons
+// used in BEM components (e.g .component__icon {@extend %icon; width: 100px;
+// height: 100px;}
+
+%icon,
+.icon {
+    position: relative;
+    top: -1px;
+    fill: currentColor;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}

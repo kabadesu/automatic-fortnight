@@ -1,0 +1,40 @@
+// Snippet
+// =============================================================================
+
+.snippet {
+    display: block;
+    width: 100%;
+}
+
+.snippet__image {
+    padding-top: 54%;
+    background-color: $color-alabaster;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $default-radius;
+    margin-bottom: 12px;
+}
+
+.snippet__content { }
+
+.snippet__title,
+.snippet__text {
+    color: $default-font-color;
+}
+
+.snippet__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 3px;
+}
+
+.snippet__text {
+    margin-bottom: 10px;
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.snippet__more { }

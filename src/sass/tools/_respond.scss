@@ -1,0 +1,29 @@
+// Respond
+// =============================================================================
+
+@mixin respond($media, $maxmin:'min') {
+
+    // Check if media query matches one of our breakpoints
+    @if map-has-key($breakpoints, $media) {
+
+        // Set the respond size, and make sure that size doesn't clash with other
+        // breakpoints if it's set to max-width.
+        @if $maxmin=='max' {
+            $respond-size: map-get($breakpoints, $media) - 0.01 !global;
+        } @else {
+            $respond-size: map-get($breakpoints, $media) !global;
+        }
+
+        // Do it!
+        @media screen and (#{$maxmin}-width: #{$respond-size}) {
+            @content;
+        }
+
+    } @else {
+        // Allow for other media types, such as print!
+        @media #{$media} {
+            @content;
+        }
+    }
+
+}

@@ -1,0 +1,14 @@
+/**
+ * A function that provides a shortcut to heading elements (1-6, or all)
+ * Usage:
+ * #{headings} // h1, h2, h3, h4, h5,h6
+ * #{headings(2,4)} // h2, h3, h4
+ */
+
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+}

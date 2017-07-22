@@ -1,0 +1,36 @@
+.button {
+    @extend %default-text;
+    position: relative;
+    background: $color-silver-chalice;
+    border: 1px solid $color-gray;
+    border-radius: $default-radius;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 14px;
+    text-align: center;
+    transition: background-color $default-transition-duration $ease-out-quadratic;
+    user-select: none;
+    // vertical-align: bottom;
+    &:focus,
+    &:hover {
+        background-color: $color-gray;
+        color: white;
+        outline: 0;
+    }
+}
+
+.button--primary {
+    background: $color-pastel-green;
+    border: 1px solid $color-fern;
+    &:focus,
+    &:hover {
+        background-color: $color-fern;
+    }
+}
+
+.button--full-width {
+    width: 100%;
+}

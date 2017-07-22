@@ -4,6 +4,7 @@
 @import 'vendor-overrides/normalize-reset';
 @import 'vendor-overrides/bootstrap-grid-settings';
 @import 'bootstrap-grid'; // node_modules
+@import 'utilities/flex'; // node_modules
 
 // Tools
 // =============================================================================
@@ -12,6 +13,7 @@
 @import 'tools/clearfix';
 @import 'tools/functions';
 @import 'tools/respond';
+@import 'tools/export-media-queries';
 
 // Helpers
 // =============================================================================
@@ -44,3 +46,4 @@
 // Modules (big bits and pieces)
 // =============================================================================
 @import 'modules/snippet';
+@import 'modules/footer';

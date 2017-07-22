@@ -1,3 +1,6 @@
+// Button
+// =============================================================================
+
 .button {
     @extend %default-text;
     position: relative;
@@ -22,6 +25,8 @@
     }
 }
 
+// Note: The following color combinations fail contrast testing. Will need to
+// speak to the designer about darken the green - even when hover.
 .button--primary {
     background: $color-pastel-green;
     border: 1px solid $color-fern;

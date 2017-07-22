@@ -1,0 +1,9 @@
+.footer {
+    background: $color-alabaster;
+    border-top: 1px solid $color-botticelli;
+    padding: $gap-xl 0;
+    @include respond(md) {
+        padding-top: $gap-xxl;
+        padding-bottom: $gap-xxl;
+    }
+}

@@ -47,11 +47,10 @@ textarea {
     padding: 0 14px;
     pointer-events: none;
     transform: translateY(-50%);
-    transition: transform $default-transition-feel, font-size $default-transition-feel;
+    transition: transform $default-transition-feel,
+                font-size $default-transition-feel,
+                left $default-transition-feel;
     white-space: nowrap;
-    @include respond(md) {
-        transition: left .3s $ease-out-quadratic, transform .3s $ease-out-quadratic;
-    }
 }
 
 .input__field:focus + .input__label,
@@ -61,7 +60,5 @@ textarea {
     @include respond(md) {
         transform: translateY(-50%) translateX(-100%);
         left: 100%;
-        //right: 0;
-
     }
 }

@@ -12,4 +12,8 @@ html {
 
 body {
     min-height: 100%;
+    padding-top: $gap-lg;
+    @include respond(md) {
+        padding-top: $gap-xl;
+    }
 }

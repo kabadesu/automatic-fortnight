@@ -1,0 +1,17 @@
+// Export media queries to javascript
+body:before {
+    content: 'xs';
+    display: none;
+    @include respond(sm) {
+        content: 'sm';
+    }
+    @include respond(md) {
+        content: 'md';
+    }
+    @include respond(lg) {
+        content: 'lg';
+    }
+    @include respond(xl) {
+        content: 'xl';
+    }
+}

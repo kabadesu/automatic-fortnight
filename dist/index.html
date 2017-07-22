@@ -19,7 +19,7 @@
 						<div class="col-md-6">
 							<div class="field">
 								<div class="input">
-									<input type="text" class="input__field" onkeyup="this.setAttribute('value', this.value);" value="" id="FirstName">
+									<input type="text" class="input__field" value="" id="FirstName">
 									<label class="input__label" for="FirstName">First name</label>
 								</div>
 							</div>
@@ -27,7 +27,7 @@
 						<div class="col-md-6">
 							<div class="field">
 								<div class="input">
-									<input type="text" class="input__field" onkeyup="this.setAttribute('value', this.value);" value="" id="LastName">
+									<input type="text" class="input__field" value="" id="LastName">
 									<label class="input__label" for="LastName">Last name</label>
 								</div>
 							</div>
@@ -37,7 +37,7 @@
 						<div class="col-md-6">
 							<div class="field">
 								<div class="input">
-									<input type="email" class="input__field" onkeyup="this.setAttribute('value', this.value);" value="" id="EmailAddress">
+									<input type="email" class="input__field" value="" id="EmailAddress">
 									<label class="input__label" for="EmailAddress">Email address</label>
 								</div>
 							</div>
@@ -45,15 +45,15 @@
 						<div class="col-md-6">
 							<div class="field">
 								<div class="input">
-									<input type="text" class="input__field" onkeyup="this.setAttribute('value', this.value);" value="">
-									<label class="input__label">Some label here</label>
+									<input type="text" class="input__field">
+									<label class="input__label">REPLACE WITH SELECT</label>
 								</div>
 							</div>
 						</div>
 					</div>
 				</fieldset>
-				<div class="row">
-					<div class="col-12">
+				<div class="row justify-content-md-center">
+					<div class="col-md-4">
 						<button class="button button--primary button--full-width">Submit</button>
 					</div>
 				</div>
@@ -95,14 +95,51 @@
 
 		<footer class="footer">
 			<div class="container">
-
+				<p>Hello</p>
 			</div>
 		</footer>
 
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script>
             $(function(){
+
                 $('body').removeClass('preload');
+
+                var breakpoint = {};
+
+                breakpoint.refreshValue = function () {
+                    this.value = window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace(/\"/g, '');
+				};
+
+                var padInputs = function () {
+                    $('.input').each(function () {
+						var validBreakpoints = ['md', 'lg', 'xl'];
+
+						var $label = $(this).find('.input__label');
+						var $input = $(this).find('.input__field');
+						var labelWidth = $label.outerWidth();
+
+						if (validBreakpoints.indexOf(breakpoint.value) === -1) {
+                            $input.css('paddingRight', '');
+                        } else {
+						    labelWidth = $label.css('fontSize') !== '14px' ? labelWidth : (labelWidth * 0.85);
+                            $input.css('paddingRight', labelWidth + 'px');
+						}
+					});
+                };
+
+                $('.input__field').keyup(function () {
+                    $(this).attr('value', $(this).val());
+				});
+
+
+                $(window).resize(function () {
+                    breakpoint.refreshValue();
+                    padInputs();
+                }).resize();
+
+
+
             });
 		</script>
 	</body>

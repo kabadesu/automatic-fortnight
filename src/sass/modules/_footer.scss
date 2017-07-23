@@ -1,8 +1,10 @@
 .footer {
     background: $color-alabaster;
     border-top: 1px solid $color-botticelli;
+    margin-top: $gap-xl;
     padding: $gap-xl 0;
     @include respond(md) {
+        margin-top: $gap-xxl;
         padding-top: $gap-xxl;
         padding-bottom: $gap-xxl;
     }
@@ -13,5 +15,8 @@
     text-align: center;
     @include respond(md) {
         text-align: left;
+    }
+    > *:last-child {
+        margin-bottom: 0;
     }
 }

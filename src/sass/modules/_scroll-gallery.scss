@@ -1,0 +1,33 @@
+.scroll-gallery {
+    height: 174px;
+    overflow: hidden;
+    margin-bottom: $gap-lg;
+}
+
+.scroll-gallery__list {
+    list-style: none;
+    overflow-x: auto;
+    padding-bottom: 40px;
+    white-space: nowrap;
+}
+
+.scroll-gallery__item {
+    display: inline-block;
+    margin-right: 10px;
+    white-space: nowrap;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.scroll-gallery__image {
+    background-color: $color-alabaster;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $default-radius;
+    display: block;
+    width: 236px;
+    height: 174px;
+}

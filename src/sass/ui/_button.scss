@@ -24,24 +24,40 @@
         outline: 0;
     }
     &:active {
-        background-color: darken($color-gray, 25%);
-        border-color: darken($color-gray, 25%);
+        background-color: darken($color-gray, 15%);
+        border-color: darken($color-gray, 15%);
     }
 
 }
 
+// Modifiers
+// =============================================================================
+
 // Note: The following color combinations fail contrast testing. Will need to
 // speak to the designer about darken the green - even when hover.
 .button--primary {
-    background: $color-pastel-green;
-    border: 1px solid $color-fern;
+    background-color: $color-pastel-green;
+    border-color: $color-fern;
     &:focus,
     &:hover {
         background-color: $color-fern;
     }
     &:active {
-        background-color: darken($color-fern, 25%);
-        border-color: darken($color-fern, 25%);
+        background-color: darken($color-fern, 15%);
+        border-color: darken($color-fern, 15%);
+    }
+}
+
+.button--danger {
+    background-color: $color-sunglo;
+    border-color: $color-matrix;
+    &:focus,
+    &:hover {
+        background-color: $color-matrix;
+    }
+    &:active {
+        background-color: darken($color-matrix, 15%);
+        border-color: darken($color-matrix, 15%);
     }
 }
 

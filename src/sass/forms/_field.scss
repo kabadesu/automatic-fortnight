@@ -8,6 +8,9 @@
     margin-top: 3px;
 }
 
+// Modifiers
+// =============================================================================
+
 .field--invalid .field__message {
-    color: red;
+    color: $color-matrix;
 }

@@ -22,3 +22,5 @@ This will install everything you need and then run the default gulp task.
 * `gulp watch` Builds source files and watches for changes.
 * `gulp build` Builds source files.
 
+## Other branches
+* `flickity-scroll-gallery` (Work in progress - untested)

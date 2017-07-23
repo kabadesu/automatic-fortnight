@@ -23,6 +23,11 @@
         color: white;
         outline: 0;
     }
+    &:active {
+        background-color: darken($color-gray, 25%);
+        border-color: darken($color-gray, 25%);
+    }
+
 }
 
 // Note: The following color combinations fail contrast testing. Will need to
@@ -33,6 +38,10 @@
     &:focus,
     &:hover {
         background-color: $color-fern;
+    }
+    &:active {
+        background-color: darken($color-fern, 25%);
+        border-color: darken($color-fern, 25%);
     }
 }
 

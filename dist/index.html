@@ -52,7 +52,9 @@
 									</select>
 									<label class="select__label" for="Country">Country</label>
 									<span class="select__selected-option"></span>
-									<span class="select__icon"></span>
+									<svg class="select__icon">
+										<use xlink:href="images/sprite.svg#arrow-down" />
+									</svg>
 								</div>
 							</div>
 						</div>
@@ -192,6 +194,25 @@
 				// out an input__field.
                 $('.input__field').keyup(function () {
                     $(this).attr('value', $(this).val());
+				});
+
+                $('.select__field').focus(function () {
+                   $(this).parent().addClass('select--has-focus');
+				}).blur(function () {
+				    $(this).parent().removeClass('select--has-focus');
+				});
+
+                $('.select__field').change(function (e) {
+                    var target = e.target;
+                    var selectedOptionText = $(target).find('option:selected').text();
+
+                    if (selectedOptionText) {
+                        $(target).siblings('.select__selected-option').text(selectedOptionText);
+                        $(target).siblings('.select__label').hide();
+					} else {
+                        $(target).siblings('.select__selected-option').text('');
+                        $(target).siblings('.select__label').show();
+					}
 				});
 
 				// TODO: Debounce to reduce number of calculations during resize (jquery.ba-throttle-debounce.js)

@@ -1,3 +1,13 @@
 .field {
     margin-bottom: $gap-sm;
 }
+
+.field__message {
+    display: block;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.field--invalid .field__message {
+    color: red;
+}

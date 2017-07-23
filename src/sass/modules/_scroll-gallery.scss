@@ -39,14 +39,15 @@ $image-shift: 5px;
     height: 174px + $image-shift;
     margin-top: -$image-shift;
     margin-bottom: $gap-lg;
+    padding-top: $image-shift;
     overflow: hidden;
 }
 
 .scroll-gallery__list {
     list-style: none;
-    overflow-x: auto;
-    padding-top: $image-shift;
-    padding-bottom: 40px;
+    //overflow-x: auto;
+
+    //padding-bottom: 40px;
     white-space: nowrap;
 }
 
@@ -76,3 +77,5 @@ $image-shift: 5px;
 .scroll-gallery__image:hover {
     transform: translateY(-$image-shift);
 }
+
+.flickity-viewport {outline: 0;}

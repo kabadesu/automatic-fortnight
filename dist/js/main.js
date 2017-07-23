@@ -65,6 +65,13 @@ $(function(){
         }
     });
 
+    $('.carousel').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true,
+        accessibility: false
+    });
+
     // TODO: Debounce to reduce number of calculations during resize (jquery.ba-throttle-debounce.js)
     $(window).resize(function () {
         breakpoint.refreshValue();

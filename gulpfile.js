@@ -19,7 +19,8 @@ var path = {
     sassGlob: 'src/sass/**/*.scss',
     svgGlob: 'src/images/svgs/**/*.svg',
     distCSS: 'dist/css/',
-    distImages: 'dist/images/'
+    distImages: 'dist/images/',
+    distJSLib: 'dist/js/lib/'
 };
 
 gulp.task('webserver', function () {
@@ -55,6 +56,11 @@ gulp.task('sprites', function () {
         .pipe(gulp.dest(path.distImages))
 });
 
+gulp.task('flickity', function () {
+    return gulp.src('node_modules/flickity/dist/flickity.pkgd.min.js')
+        .pipe(gulp.dest(path.distJSLib));
+})
+
 gulp.task('compile-sass', function () {
     return gulp.src(path.sassMain)
         .pipe(sass({
@@ -71,7 +77,7 @@ gulp.task('compile-sass', function () {
         .pipe(gulp.dest(path.distCSS))
 });
 
-gulp.task('build', ['compile-sass', 'sprites']);
+gulp.task('build', ['compile-sass', 'sprites', 'flickity']);
 
 gulp.task('watch', ['build'], function () {
     gulp.watch(path.sassGlob, ['compile-sass']);

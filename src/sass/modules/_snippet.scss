@@ -18,10 +18,9 @@
     background-size: cover;
     border-radius: $default-radius;
     margin-bottom: 11px;
-    transition: background-position .5s $default-transition-easing;
 }
 
-.snippet__content { } // Placeholder
+.snippet__content { }
 
 .snippet__title,
 .snippet__text {
@@ -43,13 +42,6 @@
 }
 
 .snippet__more { } // Placeholder
-
-.snippet:focus,
-.snippet:hover {
-    .snippet__image {
-        background-position: 50% 60%;
-    }
-}
 
 // If snippets ever have a background color or border, these classes can be
 // added to .row and .col's to ensure each box have equal heights - for now

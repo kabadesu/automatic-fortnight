@@ -1,12 +1,16 @@
+$image-shift: 5px;
+
 .scroll-gallery {
-    height: 174px;
-    overflow: hidden;
+    height: 174px + $image-shift;
+    margin-top: -$image-shift;
     margin-bottom: $gap-lg;
+    overflow: hidden;
 }
 
 .scroll-gallery__list {
     list-style: none;
     overflow-x: auto;
+    padding-top: $image-shift;
     padding-bottom: 40px;
     white-space: nowrap;
 }
@@ -30,4 +34,10 @@
     display: block;
     width: 236px;
     height: 174px;
+    transition: transform .5s $default-transition-easing;
+}
+
+.scroll-gallery__image:focus,
+.scroll-gallery__image:hover {
+    transform: translateY(-$image-shift);
 }

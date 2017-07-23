@@ -2,11 +2,11 @@
     background: $color-alabaster;
     border-top: 1px solid $color-botticelli;
     margin-top: $gap-xl;
-    padding: $gap-xl 0;
+    padding: $gap-xl 0 30px;
     @include respond(md) {
         margin-top: $gap-xxl;
         padding-top: $gap-xxl;
-        padding-bottom: $gap-xxl;
+        padding-bottom: $gap-xl;
     }
 }
 

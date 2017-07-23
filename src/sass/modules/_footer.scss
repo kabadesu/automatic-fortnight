@@ -7,3 +7,11 @@
         padding-bottom: $gap-xxl;
     }
 }
+
+.footer__info {
+    margin-bottom: 30px;
+    text-align: center;
+    @include respond(md) {
+        text-align: left;
+    }
+}

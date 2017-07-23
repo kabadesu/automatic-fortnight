@@ -1,0 +1,17 @@
+// Definition list
+// =============================================================================
+
+dl {
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+dt {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+dd {
+    margin-bottom: 3px;
+}

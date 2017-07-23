@@ -1,18 +1,31 @@
-// Spot
+// Social list
 // =============================================================================
 
-$spot-size: 40px;
+.social-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
 
-.spot {
+.social-list__item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+// Social link
+// =============================================================================
+
+$social-link-size: 40px;
+
+.social-link {
     position: relative;
     background: $default-link-color;
     border: 2px solid $default-link-color;
-    border-radius: $spot-size / 2;
-    box-shadow: 0 0 0 $spot-size white inset;
+    border-radius: $social-link-size / 2;
+    box-shadow: 0 0 0 $social-link-size white inset;
     cursor: pointer;
     display: inline-block;
-    height: $spot-size;
-    width: $spot-size;
+    height: $social-link-size;
+    width: $social-link-size;
     vertical-align: middle;
     transition: box-shadow $default-transition-feel;
 
@@ -22,7 +35,7 @@ $spot-size: 40px;
     }
 }
 
-.spot__icon {
+.social-link__icon {
     @extend %icon;
     position: absolute;
     top: 50%;
@@ -32,19 +45,19 @@ $spot-size: 40px;
     transition: color $default-transition-feel;
 }
 
-.spot__text {
+.social-link__text {
     position: absolute;
     top: 50%;
-    padding-left: $spot-size;
+    padding-left: $social-link-size;
     transform: translate(5px, -50%);
 }
 
-.spot:focus,
-.spot:hover {
-    .spot__icon {
+.social-link:focus,
+.social-link:hover {
+    .social-link__icon {
         color: white;
     }
-    .spot__text {
+    .social-link__text {
         color: $default-link-color;
     }
 

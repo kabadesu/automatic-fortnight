@@ -8,3 +8,11 @@ a {
         color: lighten($default-link-color, 15%);
     }
 }
+
+a[href^="tel:"] {
+    &,
+    &:focus,
+    &:hover {
+        color: $default-font-color;
+    }
+}

@@ -17,7 +17,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: $default-radius;
-    margin-bottom: 12px;
+    margin-bottom: 11px;
+    transition: background-position .5s $default-transition-easing;
 }
 
 .snippet__content { } // Placeholder
@@ -29,19 +30,26 @@
 
 .snippet__title {
     font-weight: bold;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: $default-font-size;
+    line-height: $default-line-height;
     margin-bottom: 3px;
 }
 
 .snippet__text {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
     > *:last-child {
         margin-bottom: 0;
     }
 }
 
 .snippet__more { } // Placeholder
+
+.snippet:focus,
+.snippet:hover {
+    .snippet__image {
+        background-position: 50% 60%;
+    }
+}
 
 // If snippets ever have a background color or border, these classes can be
 // added to .row and .col's to ensure each box have equal heights - for now

@@ -14,7 +14,7 @@
 
 			<form action="/">
 				<fieldset>
-					<legend>Form title</legend>
+					<legend><span>Form title</span></legend>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="field">
@@ -44,9 +44,15 @@
 						</div>
 						<div class="col-md-6">
 							<div class="field">
-								<div class="input">
-									<input type="text" class="input__field">
-									<label class="input__label">REPLACE WITH SELECT</label>
+								<div class="select">
+									<select type="text" class="select__field" value="" id="Country">
+										<option selected></option>
+										<option>New Zealand</option>
+										<option>Australia</option>
+									</select>
+									<label class="select__label" for="Country">Country</label>
+									<span class="select__selected-option"></span>
+									<span class="select__icon"></span>
 								</div>
 							</div>
 						</div>
@@ -63,11 +69,11 @@
 				<div class="col-md-6">
 					<a href="/" class="snippet">
 						<article>
-							<div class="snippet__image"></div>
+							<div class="snippet__image" style="background-image: url(http://via.placeholder.com/1024x768/75656D/fff)"></div>
 							<div class="snippet__content">
-								<h3 class="snippet__title">Sublime Trees</h3>
+								<h3 class="snippet__title">Image dimensions</h3>
 								<div class="snippet__text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet</p>
+									<p>Please use jpgs that are 1024x768 and compressed to around 40-50kb for easy retina support.</p>
 								</div>
 								<div class="snippet__link">View some more</div>
 							</div>
@@ -77,7 +83,7 @@
 				<div class="snippet-list__item col-md-6">
 					<a href="/" class="snippet">
 						<article>
-							<div class="snippet__image"></div>
+							<div class="snippet__image" style="background-image: url(http://via.placeholder.com/1024x768/B397B3/fff)"></div>
 							<div class="snippet__content">
 								<h3 class="snippet__title">Sublime Trees</h3>
 								<div class="snippet__text">
@@ -95,7 +101,51 @@
 
 		<footer class="footer">
 			<div class="container">
-				<p>Hello</p>
+				<div class="row">
+					<div class="col-12 col-md-5 flex-md-last">
+						<address class="footer__info">
+							<dl>
+								<dt>Main Office</dt>
+								<dd>6235 Thalia Terrace Apt. 695</dd>
+								<dd>Frederikfurt</dd>
+								<dd>Jamaica</dd>
+							</dl>
+						</address>
+						<address class="footer__info">
+							<dl>
+								<dt>Contact</dt>
+								<dd><a href="tel:735-421-6378">735-421-6378</a></dd>
+								<dd><a href="">myname@gmail.com</a></dd>
+							</dl>
+						</address>
+					</div>
+					<div class="col-12 col-md-7 flex-md-first">
+						<ul class="footer__info social-list">
+							<li class="social-list__item">
+								<a href="/" class="social-link">
+									<svg class="social-link__icon">
+										<use xlink:href="images/sprite.svg#facebook" />
+									</svg>
+								</a>
+							</li>
+							<li class="social-list__item">
+								<a href="/" class="social-link">
+									<svg class="social-link__icon">
+										<use xlink:href="images/sprite.svg#instagram" />
+									</svg>
+								</a>
+							</li>
+							<li class="social-list__item">
+								<a href="/" class="social-link">
+									<svg class="social-link__icon">
+										<use xlink:href="images/sprite.svg#youtube" />
+									</svg>
+								</a>
+							</li>
+						</ul>
+						<p class="footer__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+					</div>
+				</div>
 			</div>
 		</footer>
 
@@ -103,36 +153,48 @@
 		<script>
             $(function(){
 
+				// Prevent transitions from running on page load.
                 $('body').removeClass('preload');
 
+                // Grab our brealpoint labels from the body tag.
                 var breakpoint = {};
-
                 breakpoint.refreshValue = function () {
                     this.value = window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace(/\"/g, '');
 				};
 
+                // Pad text inputs when label is moved to the right.
                 var padInputs = function () {
                     $('.input').each(function () {
-						var validBreakpoints = ['md', 'lg', 'xl'];
+
+                        // The label moves to the top on mobile, so we don't
+						// want to pad in that case.
+						var invalidBreakpoints = ['xs', 'sm'];
 
 						var $label = $(this).find('.input__label');
 						var $input = $(this).find('.input__field');
 						var labelWidth = $label.outerWidth();
 
-						if (validBreakpoints.indexOf(breakpoint.value) === -1) {
+						// Account for the smaller label size of engaged inputs
+						// when resizing from mobile to desktop.
+                        labelWidth = $label.css('fontSize') !== '14px' ? labelWidth : (labelWidth * 0.85);
+
+                        // Remove this padding when resizing to mobile.
+						if (invalidBreakpoints.indexOf(breakpoint.value) !== -1) {
                             $input.css('paddingRight', '');
                         } else {
-						    labelWidth = $label.css('fontSize') !== '14px' ? labelWidth : (labelWidth * 0.85);
                             $input.css('paddingRight', labelWidth + 'px');
 						}
 					});
                 };
 
+                // Add a value to inputs so we can using input:not([value=""])
+				// in CSS to persist the engaged label state when the user fills
+				// out an input__field.
                 $('.input__field').keyup(function () {
                     $(this).attr('value', $(this).val());
 				});
 
-
+				// TODO: Debounce to reduce number of calculations during resize (jquery.ba-throttle-debounce.js)
                 $(window).resize(function () {
                     breakpoint.refreshValue();
                     padInputs();

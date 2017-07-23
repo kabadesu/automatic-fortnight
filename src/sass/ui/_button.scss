@@ -1,6 +1,17 @@
 // Button
 // =============================================================================
 
+/*
+    Markup:
+
+    <button class="button">Default button</button>
+    <button class="button button--primary">Primary button</button>
+    <button class="button button--danger button--full-width">Full width danger button!</button>
+
+    The above are also available as links if you really need to navigate.
+
+*/
+
 .button {
     @extend %default-text;
     position: relative;

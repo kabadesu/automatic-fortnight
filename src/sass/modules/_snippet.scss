@@ -1,6 +1,23 @@
 // Snippet
 // =============================================================================
 
+/*
+    Markup:
+
+    <a href="/" class="snippet">
+        <article>
+            <div class="snippet__image" style="background-image: url(...)"></div>
+            <div class="snippet__content">
+                <h3 class="snippet__title">Title</h3>
+                <div class="snippet__text">
+                    <p>Test</p>
+                </div>
+                <div class="snippet__link">Link</div>
+            </div>
+        </article>
+    </a>
+
+ */
 .snippet {
     display: block;
     width: 100%;

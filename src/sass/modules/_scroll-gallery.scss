@@ -1,6 +1,36 @@
 // Scroll gallery
 // =============================================================================
 
+/*
+    Markup:
+
+    <div class="scroll-gallery">
+        <ul class="scroll-gallery__list">
+            <li class="scroll-gallery__item">
+                <a href="" class="scroll-gallery__image" style="background-image: url(...)">
+                    <span class="sr-only">Image Name</span>
+                </a>
+            </li>
+            <li class="scroll-gallery__item">
+                <a href="" class="scroll-gallery__image" style="background-image: url(...)">
+                    <span class="sr-only">Image Name</span>
+                </a>
+            </li>
+            <li class="scroll-gallery__item">
+                <a href="" class="scroll-gallery__image" style="background-image: url(...)">
+                    <span class="sr-only">Image Name</span>
+                </a>
+            </li>
+            <li class="scroll-gallery__item">
+                <a href="" class="scroll-gallery__image" style="background-image: url(...)">
+                    <span class="sr-only">Image Name</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+ */
+
 // Images shift up on hover, this variable controls how much they shift by, and
 // also how much to counter-act that!
 $image-shift: 5px;

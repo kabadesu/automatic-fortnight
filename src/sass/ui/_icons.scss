@@ -1,9 +1,18 @@
 // Icon
 // =============================================================================
 
-// You can use `.icon` to place icons throughout the site, and `%icon` for icons
-// used in BEM components (e.g .component__icon {@extend %icon; width: 100px;
-// height: 100px;}
+/*
+    Markup:
+
+    <svg class="icon">
+        <use xlink:href="images/sprite.svg#facebook" />
+    </svg>
+
+    It's good to have an icon set that's available to use across the site, but
+    @extend %icon when using icons in modules/components so we don't end up
+    with too many of these kind of class definitions class="icon social__icon".
+
+ */
 
 %icon,
 .icon {

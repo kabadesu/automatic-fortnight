@@ -1,3 +1,23 @@
+// Field
+// =============================================================================
+
+/*
+    Markup:
+
+    <div class="field">
+        ...
+    </div>
+
+    It has an optional message area, for validation or help text:
+
+    <div class="field field--invalid">
+        ...
+        <span class="field__message">Failed!</span>
+    </div>
+
+    Note: There's no script to add the validation classes yet!
+ */
+
 .field {
     margin-bottom: $gap-sm;
 }

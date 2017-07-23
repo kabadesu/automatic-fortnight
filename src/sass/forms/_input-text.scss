@@ -1,4 +1,13 @@
 // Basic inputs
+// =============================================================================
+
+/*
+    Markup:
+
+    <input type="text" placeholder="What else can I say?">
+
+ */
+
 [type=text],
 [type=email],
 textarea {
@@ -22,6 +31,22 @@ textarea {
         }
     }
 }
+
+// Better inputs
+// =============================================================================
+
+/*
+    Markup:
+
+    <div class="input">
+        <input type="text" class="input__field" value="" id="InputID">
+        <label class="input__label" for="InputID">First name</label>
+    </div>
+
+    Note: The empty value attribute is important for persisting the label
+    position when text is entered.
+
+ */
 
 .input {
     position: relative;

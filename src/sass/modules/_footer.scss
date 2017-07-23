@@ -1,6 +1,21 @@
 // Footer
 // =============================================================================
 
+/*
+    Markup:
+
+    <footer class="footer">
+        <div class="container">
+        ... grid stuff ...
+            <div class="footer__info">
+                ...
+            </div>
+        ... grid stuff ...
+        </div>
+    </footer>
+
+ */
+
 .footer {
     background: $color-alabaster;
     border-top: 1px solid $color-botticelli;

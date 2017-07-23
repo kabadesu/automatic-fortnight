@@ -1,6 +1,24 @@
 // Social list
 // =============================================================================
 
+/*
+    Markup:
+
+    <ul class="social-list">
+        <li class="social-list__item">
+            <a href="/" class="social-link">
+                <svg class="social-link__icon">
+                    <use xlink:href="images/sprite.svg#facebook" />
+                </svg>
+            </a>
+        </li>
+        ...
+    </ul>
+
+    Note: The social svg icons have title tags, so they're accessible!
+
+ */
+
 .social-list {
     list-style: none;
     margin-bottom: 20px;
